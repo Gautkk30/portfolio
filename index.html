@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gautham K K — Frontend Developer & UI/UX Designer</title>
+<meta name="description" content="Gautham K K — B.Tech Computer Science and Engineering student, frontend developer and UI/UX designer. Open to software development internships. Explore projects, skills, and experience.">
+<meta name="author" content="Gautham K K">
+<meta name="keywords" content="Gautham K K, frontend developer, UI UX designer, computer science student, web developer, React, portfolio">
+<link rel="canonical" href="https://gauthamkk.dev/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gautham K K — Frontend Developer & UI/UX Designer">
+<meta property="og:description" content="B.Tech Computer Science and Engineering student, frontend developer and UI/UX designer. Open to software development internships.">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/134776912?v=4">
+<meta property="og:url" content="https://gauthamkk.dev/">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Gautham K K — Frontend Developer & UI/UX Designer">
+<meta name="twitter:description" content="B.Tech Computer Science and Engineering student, frontend developer and UI/UX designer. Open to software development internships.">
+<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/134776912?v=4">
+
+<meta name="theme-color" content="#0a0f0c" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4f7f4" media="(prefers-color-scheme: light)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a0f0c'/%3E%3Ctext x='50' y='68' font-size='58' font-family='monospace' font-weight='700' fill='%234ade80' text-anchor='middle'%3E%3E_%3C/text%3E%3C/svg%3E">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="dots"><span></span><span></span><span></span></div>
+    <div class="tabs" id="tabs">
+      <a class="tab" data-target="work" href="#work">work</a>
+      <a class="tab" data-target="experience" href="#experience">experience</a>
+      <a class="tab" data-target="skills" href="#skills">skills</a>
+      <a class="tab" data-target="about" href="#about">about</a>
+      <a class="tab" data-target="contact" href="#contact">contact</a>
+      <span class="tab-indicator" id="tabIndicator"></span>
+    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+    </button>
+    <button class="cmdk-trigger" id="cmdkTrigger" title="Command palette (Ctrl/Cmd+K)">⌘K</button>
+    <a class="nav-404" href="404.html" title="psst — hidden game">404</a>
+    <div class="status"><span class="pulse"></span> main · synced</div>
+  </div>
+</div>
+
+<nav class="progress-rail" id="progressRail" aria-label="Section progress">
+  <a class="progress-dot" data-target="work" href="#work" aria-label="01 Work section"><span class="progress-dot-label">01 Work</span></a>
+  <a class="progress-dot" data-target="what-i-do" href="#what-i-do" aria-label="02 What I Do section"><span class="progress-dot-label">02 What I Do</span></a>
+  <a class="progress-dot" data-target="experience" href="#experience" aria-label="03 Experience section"><span class="progress-dot-label">03 Experience</span></a>
+  <a class="progress-dot" data-target="skills" href="#skills" aria-label="04 Skills section"><span class="progress-dot-label">04 Skills</span></a>
+  <a class="progress-dot" data-target="about" href="#about" aria-label="05 About section"><span class="progress-dot-label">05 About</span></a>
+  <a class="progress-dot" data-target="contact" href="#contact" aria-label="06 Contact section"><span class="progress-dot-label">06 Contact</span></a>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="hero-flex">
+    <div class="hero-text">
+      <div class="prompt-line hero-anim"><span class="sigil">visitor@portfolio</span>:~$ whoami <span class="prompt-comment" id="greetingText"></span></div>
+      <h1 class="hero-anim">Gautham K K<span class="accent">.</span></h1>
+      <div class="role-line hero-anim" id="roleLine"><span id="roleText"></span><span class="cursor"></span></div>
+      <p class="hero-desc hero-anim">I build polished, responsive web experiences with a focus on interaction, usability, and visual design.</p>
+      <p class="hero-meta hero-anim">B.Tech in Computer Science and Engineering · College of Engineering, Attingal · Class of 2028</p>
+      <div class="hero-badge hero-anim"><span class="hero-badge-dot"></span> Open to Software Development Internships</div>
+      <div class="hero-cta hero-anim">
+        <a class="btn primary" href="#work">View Projects <span class="arrow">→</span></a>
+        <a class="btn" href="#contact">Contact Me</a>
+        <a class="btn" href="#" download>Résumé</a>
+      </div>
+    </div>
+    <div class="avatar-frame">
+      <div class="avatar-label">avatar.png</div>
+      <img src="https://avatars.githubusercontent.com/u/134776912?v=4" alt="Gautham K K">
+    </div>
+  </div>
+</section>
+
+<!-- ================= WORK ================= -->
+<section id="work">
+  <div class="section-eyebrow reveal">01 / SELECTED WORK</div>
+  <h2 class="section-title reveal">Selected <span class="kw">Work</span></h2>
+
+  <div class="featured-project reveal">
+    <div class="featured-eyebrow">Featured Project</div>
+    <h3 class="featured-title">Spendly</h3>
+    <p class="featured-tagline">Personal Finance Management Platform</p>
+    <p class="featured-desc">A full-stack personal finance platform for managing multiple wallets, tracking transactions, and planning budgets — built with a real cloud-backed architecture rather than a local mock dataset.</p>
+
+    <div class="featured-tags">
+      <button type="button" class="tag" data-tech="React">React</button><button type="button" class="tag" data-tech="TypeScript">TypeScript</button><button type="button" class="tag" data-tech="Node.js">Node.js</button>
+      <button type="button" class="tag" data-tech="MongoDB">MongoDB Atlas</button><button type="button" class="tag" data-tech="Google OAuth">Google OAuth</button>
+    </div>
+
+    <ul class="featured-highlights">
+      <li>Migrated from a local mock <code>db.json</code> architecture to MongoDB Atlas</li>
+      <li>User-owned wallet architecture with onboarding for new users</li>
+      <li>Google OAuth authentication and account handling</li>
+      <li>Full CRUD transaction handling tied to real wallets</li>
+      <li>Interactive financial analytics and budget planning</li>
+      <li>Inline category creation and legacy transaction migration</li>
+      <li>Responsive UI with cloud-backed, user-specific data persistence</li>
+    </ul>
+
+    <div class="featured-actions">
+      <a class="btn primary" href="https://spendly-107229934573.asia-southeast1.run.app/" target="_blank" rel="noopener">Live Demo</a>
+      <a class="btn" href="https://github.com/Gautkk30/Spendly" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn proj-more" href="#" data-project="spendly">Case Study</a>
+    </div>
+  </div>
+
+  <div class="other-work-label reveal">Other Projects</div>
+  <div class="proj-grid other-proj-grid">
+    <div class="proj-card reveal">
+      <div class="proj-top">
+        <span class="proj-name">Musi</span>
+        <span class="proj-status">shipped</span>
+      </div>
+      <p class="proj-desc">A modern music player web app with local audio playback, iTunes API search with 30-second previews, a customizable equalizer, and multiple themes.</p>
+      <div class="proj-tags"><button type="button" class="tag" data-tech="JavaScript">JavaScript</button><button type="button" class="tag" data-tech="HTML">HTML</button><button type="button" class="tag" data-tech="CSS">CSS</button><button type="button" class="tag" data-tech="Java">Java</button><button type="button" class="tag" data-tech="Firebase">Firebase</button><button type="button" class="tag" data-tech="iTunes API">iTunes API</button></div>
+      <div class="proj-links"><a href="https://github.com/Gautkk30/Musi" target="_blank" rel="noopener">github</a><a href="https://musi-6ak0.onrender.com/" target="_blank" rel="noopener">live demo</a><a href="#" class="proj-more" data-project="musi">case study</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHAT I DO ================= -->
+<section id="what-i-do">
+  <div class="section-eyebrow reveal">02 / WHAT I DO</div>
+  <h2 class="section-title reveal">What I Do</h2>
+
+  <div class="wid-grid">
+    <div class="wid-item reveal">
+      <div class="wid-num">01</div>
+      <div class="wid-title">Frontend Development</div>
+      <p class="wid-desc">Responsive interfaces focused on usability, performance, and visual polish.</p>
+    </div>
+    <div class="wid-item reveal">
+      <div class="wid-num">02</div>
+      <div class="wid-title">UI/UX Design</div>
+      <p class="wid-desc">Turning ideas and requirements into clean, intuitive digital interfaces.</p>
+    </div>
+    <div class="wid-item reveal">
+      <div class="wid-num">03</div>
+      <div class="wid-title">Creative Development</div>
+      <p class="wid-desc">Combining development with visual design, photography, and video editing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience">
+  <div class="section-eyebrow reveal">03 / EXPERIENCE</div>
+  <h2 class="section-title reveal">Experience <span class="pn">&amp;</span> Education</h2>
+
+  <div class="gitlog" style="margin-top:26px;">
+    <div class="commit reveal">
+      <span class="commit-hash">#f3a1c9</span><span class="commit-branch">freelance</span>
+      <div class="commit-msg">Freelance Frontend Web Developer</div>
+      <div class="commit-meta">Jun 2025 – Jan 2026 · Kerala, India</div>
+      <ul class="commit-bullets">
+        <li>Designed and developed responsive websites for individual clients and small businesses.</li>
+        <li>Translated requirements and visual concepts into functional interfaces.</li>
+        <li>Worked across design, frontend development, and deployment.</li>
+        <li>Built polished, user-facing experiences from concept to launch.</li>
+      </ul>
+    </div>
+    <div class="commit reveal">
+      <span class="commit-hash">#7c04ba</span><span class="commit-branch">main</span>
+      <div class="commit-msg">B.Tech in Computer Science and Engineering</div>
+      <div class="commit-meta">Sep 2024 – Jun 2028 · College of Engineering, Attingal · APJ Abdul Kalam Technological University</div>
+    </div>
+    <div class="commit reveal">
+      <span class="commit-hash">#3f88d1</span><span class="commit-branch">ieee</span>
+      <div class="commit-msg">Member, IEEE Student Branch</div>
+      <div class="commit-meta">Dec 2024 – Jan 2026 · Technical events, workshops, and collaborative learning in software development</div>
+    </div>
+    <div class="commit reveal">
+      <span class="commit-hash">#0e21ff</span><span class="commit-branch">school</span>
+      <div class="commit-msg">Higher Secondary, Computer Science</div>
+      <div class="commit-meta">Aug 2022 – May 2024 · Metropolitan Higher Secondary School, Puthencavu</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills">
+  <div class="section-eyebrow reveal">04 / SKILLS</div>
+  <h2 class="section-title reveal">Skills</h2>
+
+  <div class="skills-grid" style="margin-top:22px;">
+    <div class="skill-group reveal">
+      <div class="skill-group-title">Frontend</div>
+      <div class="chips">
+        <button type="button" class="chip" data-tech="HTML">HTML</button><button type="button" class="chip" data-tech="CSS">CSS</button><button type="button" class="chip" data-tech="JavaScript">JavaScript</button>
+        <button type="button" class="chip" data-tech="React">React</button><button type="button" class="chip" data-tech="Bootstrap">Bootstrap</button>
+      </div>
+    </div>
+    <div class="skill-group reveal">
+      <div class="skill-group-title">Backend / Data</div>
+      <div class="chips">
+        <button type="button" class="chip" data-tech="Node.js">Node.js</button><button type="button" class="chip" data-tech="MongoDB">MongoDB</button><button type="button" class="chip" data-tech="SQL">SQL</button>
+      </div>
+    </div>
+    <div class="skill-group reveal">
+      <div class="skill-group-title">Programming</div>
+      <div class="chips">
+        <button type="button" class="chip" data-tech="C">C</button><button type="button" class="chip" data-tech="C++">C++</button><button type="button" class="chip" data-tech="Python">Python</button>
+      </div>
+    </div>
+    <div class="skill-group reveal">
+      <div class="skill-group-title">Design &amp; Creative</div>
+      <div class="chips">
+        <button type="button" class="chip" data-tech="Photoshop">Photoshop</button><button type="button" class="chip" data-tech="Lightroom">Lightroom</button><button type="button" class="chip" data-tech="DaVinci Resolve">DaVinci Resolve</button>
+        <button type="button" class="chip" data-tech="Photography">Photography</button><button type="button" class="chip" data-tech="Photo Editing">Photo Editing</button><button type="button" class="chip" data-tech="Video Editing">Video Editing</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="section-eyebrow reveal">05 / ABOUT</div>
+  <h2 class="section-title reveal">About</h2>
+
+  <div class="about-prose" style="margin-top:18px;">
+    <p class="reveal">I'm a Computer Science and Engineering student focused on frontend and web development, with a strong interest in UI/UX design. I like working across the full process — from planning features and structuring interfaces to building and refining the details that make a product feel polished.</p>
+    <p class="reveal">Alongside development, I have a creative background in photography, photo editing, and video editing, which shapes how I approach visual design and layout. I'm currently looking for software development internships where I can build real products and keep learning from experienced developers.</p>
+  </div>
+
+  <div class="stats reveal">
+    <div class="stat"><div class="num">2028</div><div class="lbl">grad year</div></div>
+    <div class="stat"><div class="num">8mo</div><div class="lbl">freelance dev</div></div>
+    <div class="stat"><div class="num">IEEE</div><div class="lbl">student member</div></div>
+  </div>
+
+  <div class="now-building reveal">
+    <div class="nb-block">
+      <div class="nb-label">Currently Building</div>
+      <div class="nb-title">Spendly</div>
+      <p class="nb-desc">Refining the finance platform and its user experience.</p>
+    </div>
+    <div class="nb-block">
+      <div class="nb-label">Currently Exploring</div>
+      <div class="chips">
+        <button type="button" class="chip" data-tech="React">React</button><button type="button" class="chip" data-tech="TypeScript">TypeScript</button><button type="button" class="chip" data-tech="Node.js">Node.js</button><button type="button" class="chip" data-tech="MongoDB">MongoDB</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GITHUB ACTIVITY ================= -->
+<section id="github-activity" class="github-activity-section">
+  <div class="github-card reveal">
+    <div class="github-card-info">
+      <div class="section-eyebrow" style="margin-bottom:6px;">GITHUB ACTIVITY</div>
+      <p class="github-card-desc">I build and ship most of my projects in the open — check the commit history for yourself.</p>
+      <span class="github-username">@Gautkk30</span>
+    </div>
+    <div class="github-activity-grid" id="ghActivityGrid" aria-label="GitHub public activity visualization"></div>
+    <a class="btn primary github-card-link" href="https://github.com/Gautkk30" target="_blank" rel="noopener">View GitHub <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="section-eyebrow reveal">06 / CONTACT</div>
+  <h2 class="section-title reveal">Let's Build Something</h2>
+  <p class="contact-sub reveal">Have an idea, internship opportunity, or project you'd like to discuss?</p>
+
+  <div class="contact-primary-actions reveal">
+    <a class="btn primary" href="mailto:kkgautham28@gmail.com">Email Me</a>
+    <a class="btn" href="https://www.linkedin.com/in/gautham-kk" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://github.com/Gautkk30" target="_blank" rel="noopener">GitHub</a>
+  </div>
+
+  <div class="contact-secondary-label reveal">// or, if you prefer the terminal</div>
+
+  <div class="terminal reveal">
+    <div class="term-out">Type <span class="ok">email</span>, <span class="ok">github</span>, <span class="ok">linkedin</span>, or <span class="ok">instagram</span> and press enter.</div>
+    <div class="term-out" id="termOut"></div>
+    <div class="term-row">
+      <span class="sigil">$</span>
+      <input class="term-input" id="termInput" type="text" placeholder="type a command..." autocomplete="off" spellcheck="false" aria-label="Contact terminal command input">
+    </div>
+    <div class="contact-links">
+      <a class="btn" href="https://www.instagram.com/kk.gautham" target="_blank" rel="noopener">instagram</a>
+      <a class="btn" href="#" download>résumé.pdf</a>
+    </div>
+    <div class="term-hint">// résumé file still needed</div>
+  </div>
+
+  <div class="contact-form-wrap reveal">
+    <div class="filehead" style="margin-bottom:14px;"><span class="fname">message.send()</span><span>or use the form</span></div>
+    <form id="contactForm" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="cf-row">
+        <label for="cfName">name</label>
+        <input id="cfName" name="name" type="text" required autocomplete="name">
+      </div>
+      <div class="cf-row">
+        <label for="cfEmail">email</label>
+        <input id="cfEmail" name="email" type="email" required autocomplete="email">
+      </div>
+      <div class="cf-row">
+        <label for="cfMessage">message</label>
+        <textarea id="cfMessage" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn primary" id="cfSubmit">send message</button>
+      <div class="cf-status" id="cfStatus" aria-live="polite"></div>
+    </form>
+  </div>
+
+  <div class="now-playing reveal">
+    <div class="now-playing-label">// now playing</div>
+    <div class="player" id="musicPlayer">
+      <div class="player-idle" id="playerIdle">
+        <span class="player-idle-dot"></span>
+        <span class="player-idle-text">Nothing is currently playing</span>
+        <button class="player-idle-btn" id="playerIdleStart" aria-label="Start playing the demo playlist">▶ play something</button>
+      </div>
+
+      <div class="player-active" id="playerActive">
+        <div class="player-art" id="playerArt">
+          <div class="eq-bars"><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="player-body">
+          <div class="player-track-row">
+            <div class="player-track-info">
+              <div class="player-track" id="playerTrack" aria-live="polite">Track title</div>
+              <div class="player-artist" id="playerArtist">Artist</div>
+            </div>
+            <span class="player-source">Portfolio Player</span>
+          </div>
+          <div class="player-seek-row">
+            <span class="player-time" id="playerCurrent">0:00</span>
+            <input type="range" id="playerSeek" class="player-seek" min="0" max="100" value="0" step="0.1" aria-label="Seek">
+            <span class="player-time" id="playerDuration">0:00</span>
+          </div>
+          <div class="player-controls">
+            <button class="player-btn" id="playerPrev" aria-label="Previous track">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M6 6h2v12H6zM20 6v12l-9-6z"/></svg>
+            </button>
+            <button class="player-btn player-btn-play" id="playerPlay" aria-label="Pause">
+              <svg class="icon-play" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              <svg class="icon-pause" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>
+            </button>
+            <button class="player-btn" id="playerNext" aria-label="Next track">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M16 6h2v12h-2zM4 6v12l9-6z"/></svg>
+            </button>
+            <div class="player-volume">
+              <svg class="player-vol-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M4 9v6h4l5 5V4L8 9H4z"/></svg>
+              <input type="range" id="playerVolume" class="player-seek" min="0" max="100" value="70" aria-label="Volume">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <audio id="playerAudio" preload="metadata"></audio>
+    </div>
+    <a class="now-playing-credit" href="https://github.com/Gautkk30/Musi" target="_blank" rel="noopener">// powered by Musi</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-row">
+    <span>© 2026 Gautham K K · built with vanilla JS, no framework</span>
+    <a class="totop" href="#top">back to top ↑</a>
+  </div>
+  <div class="footer-meta" id="footerMeta"></div>
+</footer>
+
+<!-- ================= TECH POPOVER ================= -->
+<div class="tech-popover" id="techPopover" role="tooltip">
+  <div class="tech-popover-title" id="tpTitle"></div>
+  <div class="tech-popover-row" id="tpUsedRow">
+    <span class="tech-popover-label">Used in</span>
+    <span id="tpUsed"></span>
+  </div>
+  <div class="tech-popover-row">
+    <span class="tech-popover-label">Purpose</span>
+    <span id="tpPurpose"></span>
+  </div>
+</div>
+
+<!-- ================= CASE STUDY MODAL ================= -->
+<div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-bar">
+      <div class="dots"><span></span><span></span><span></span></div>
+      <span class="modal-filename" id="modalFilename">case-study.md</span>
+      <button class="modal-close" id="modalClose" aria-label="Close case study">✕</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<!-- ================= COMMAND PALETTE ================= -->
+<div class="cmdk-overlay" id="cmdkOverlay" aria-hidden="true">
+  <div class="cmdk-panel" role="dialog" aria-modal="true" aria-label="Command palette">
+    <div class="cmdk-input-row">
+      <span class="cmdk-icon">&gt;_</span>
+      <input type="text" id="cmdkInput" class="cmdk-input" placeholder="Type a command or search..." autocomplete="off" spellcheck="false" aria-label="Command palette search">
+      <span class="cmdk-esc">ESC</span>
+    </div>
+    <div class="cmdk-list" id="cmdkList"></div>
+    <div class="cmdk-shortcuts">
+      <span><kbd>G</kbd> work</span><span><kbd>A</kbd> about</span><span><kbd>E</kbd> experience</span>
+      <span><kbd>S</kbd> skills</span><span><kbd>C</kbd> contact</span><span><kbd>T</kbd> theme</span><span><kbd>/</kbd> palette</span>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js" defer></script>
+
+</body>
+</html>
