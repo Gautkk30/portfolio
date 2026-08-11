@@ -130,7 +130,12 @@ The portfolio features a deliberate **Developer / Code Editor / Terminal** visua
 
 ### Contact Terminal
 * Interactive command line interface (`#termInput`).
-* Supports commands: `email`, `github`, `linkedin`, `instagram`, `contact`, `sudo hire me`, `sudo hire-me`, and `sudo hire gautham`.
+* Supports commands: `email`, `github`, `linkedin`, `instagram`, `contact`, `resume`, `sudo hire me`, `sudo hire-me`, and `sudo hire gautham`.
+
+### Downloadable Resume Feature
+* **Asset Location**: Single source of truth PDF at `assets/Gautham_KK_resume.pdf` (65,823 bytes).
+* **UI Actions**: Native "Download Resume" buttons in Hero section and Contact links area using standard HTML `download="Gautham_KK_resume.pdf"` attribute.
+* **Integrations**: Integrated into Command Palette (`Download Resume`) and Contact Terminal (`resume` command).
 
 ### Now Playing Music Player
 * Pure client-side audio player for demo lofi tracks hosted via SoundHelix.

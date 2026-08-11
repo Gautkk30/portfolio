@@ -174,6 +174,14 @@
           '</div>';
       } else if(cmd === 'sudo hire-me'){
         out.innerHTML = '<span class="ok">$</span> sudo hire-me → [sudo] password for recruiter: ******** <span class="ok">✓ access granted.</span> scroll down, the contact form is right there.';
+      } else if(cmd === 'resume'){
+        out.innerHTML = '<span class="ok">$</span> resume → downloading Gautham_KK_resume.pdf ...';
+        var a = document.createElement('a');
+        a.href = 'assets/Gautham_KK_resume.pdf';
+        a.download = 'Gautham_KK_resume.pdf';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
       } else if(cmd === 'contact'){
         var contactEl = document.getElementById('contact');
         if(contactEl) contactEl.scrollIntoView({ behavior: 'smooth' });
@@ -182,7 +190,7 @@
         out.innerHTML = '<span class="ok">$</span> ' + cmd + ' → ' + responses[cmd].text;
         window.open(responses[cmd].url, cmd === 'email' ? '_self' : '_blank', 'noopener');
       } else if(cmd){
-        out.textContent = 'command not found: ' + cmd + ' (try email, github, linkedin, instagram)';
+        out.textContent = 'command not found: ' + cmd + ' (try email, github, linkedin, instagram, resume)';
       }
       input.value = '';
     });
@@ -410,6 +418,7 @@
       { label: 'View Spendly case study', hint: 'featured project', action: function(){ if(window.__openCaseStudy) window.__openCaseStudy('spendly'); } },
       { label: 'View Musi case study', hint: 'project', action: function(){ if(window.__openCaseStudy) window.__openCaseStudy('musi'); } },
       { label: 'Send a message', hint: 'contact form', action: function(){ scrollToSection('contact'); var el = document.getElementById('cfName'); if(el) setTimeout(function(){ el.focus(); }, 500); } },
+      { label: 'Download Resume', hint: 'PDF download', action: function(){ var a = document.createElement('a'); a.href = 'assets/Gautham_KK_resume.pdf'; a.download = 'Gautham_KK_resume.pdf'; document.body.appendChild(a); a.click(); document.body.removeChild(a); } },
       { label: 'Email me directly', hint: 'mailto', action: function(){ window.location.href = 'mailto:kkgautham28@gmail.com'; } },
       { label: 'Open GitHub', hint: 'external ↗', action: function(){ window.open('https://github.com/Gautkk30', '_blank', 'noopener'); } },
       { label: 'Open LinkedIn', hint: 'external ↗', action: function(){ window.open('https://www.linkedin.com/in/gautham-kk', '_blank', 'noopener'); } },
