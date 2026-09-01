@@ -648,6 +648,188 @@
 
   .featured-actions{ display:flex; gap:12px; flex-wrap:wrap; }
 
+  /* ---------- P2P Network Flow Visualization (DevDrop) ---------- */
+  .p2p-diagram{
+    background:var(--bg-panel-2);
+    border:1px solid var(--border);
+    border-radius:6px;
+    padding:16px 18px;
+    margin:18px 0 22px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+    position:relative;
+    overflow:hidden;
+    transition:border-color .3s var(--ease-premium);
+  }
+  .featured-project:hover .p2p-diagram{
+    border-color:var(--border-hi);
+  }
+  .p2p-node{
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+    flex:0 0 auto;
+  }
+  .p2p-node-tag{
+    font-family:var(--mono);
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:.08em;
+    color:var(--text-faint);
+    text-transform:uppercase;
+  }
+  .p2p-node-name{
+    font-family:var(--mono);
+    font-size:12.5px;
+    font-weight:600;
+    color:var(--text);
+    display:flex;
+    align-items:center;
+    gap:6px;
+  }
+  .p2p-node-sub{
+    font-family:var(--mono);
+    font-size:10.5px;
+    color:var(--cyan);
+  }
+  .p2p-track{
+    flex:1 1 auto;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:0 8px;
+    min-width:120px;
+  }
+  .p2p-line-wrap{
+    position:relative;
+    width:100%;
+    height:2px;
+    background:var(--border);
+    border-radius:1px;
+    overflow:visible;
+  }
+  .p2p-packet{
+    position:absolute;
+    top:50%;
+    width:24px;
+    height:4px;
+    border-radius:2px;
+    background:linear-gradient(90deg, transparent, var(--green));
+    box-shadow:0 0 8px var(--green);
+    transform:translate(-50%, -50%);
+    opacity:0;
+    animation:p2pFlow 3.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+  .p2p-packet.p2p-packet-2{
+    animation-delay:1.7s;
+  }
+  @keyframes p2pFlow{
+    0%{ left:0%; opacity:0; }
+    15%{ opacity:1; }
+    85%{ opacity:1; }
+    100%{ left:100%; opacity:0; }
+  }
+  .featured-project:hover .p2p-packet{
+    box-shadow:0 0 12px var(--green);
+  }
+  .p2p-badge{
+    font-family:var(--mono);
+    font-size:10.5px;
+    font-weight:600;
+    letter-spacing:.08em;
+    color:var(--green);
+    background:var(--bg-panel);
+    border:1px solid var(--border);
+    padding:3px 8px;
+    border-radius:4px;
+    margin-top:10px;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    white-space:nowrap;
+    transition:border-color .3s var(--ease-premium), color .3s var(--ease-premium);
+  }
+  .featured-project:hover .p2p-badge{
+    border-color:var(--green-dim);
+  }
+  .p2p-badge .p2p-pulse{
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:var(--green);
+    box-shadow:0 0 5px var(--green);
+    animation:pulse 2s ease-in-out infinite;
+  }
+
+  /* Technical Specs / Highlights Grid */
+  .tech-spec-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:10px;
+    margin-bottom:24px;
+  }
+  .tech-spec-item{
+    background:var(--bg-panel-2);
+    border:1px solid var(--border);
+    border-radius:6px;
+    padding:12px 14px;
+    transition:border-color .3s var(--ease-premium), transform .3s var(--ease-premium);
+  }
+  .featured-project:hover .tech-spec-item{
+    border-color:var(--border-hi);
+  }
+  .tech-spec-title{
+    font-family:var(--mono);
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:.06em;
+    color:var(--green);
+    margin-bottom:4px;
+    text-transform:uppercase;
+  }
+  .tech-spec-desc{
+    font-family:var(--font-body);
+    font-size:12.5px;
+    color:var(--text-dim);
+    line-height:1.45;
+  }
+
+  @media (max-width: 640px){
+    .tech-spec-grid{
+      grid-template-columns:1fr;
+      gap:8px;
+    }
+    .p2p-diagram{
+      padding:12px 14px;
+      gap:8px;
+    }
+    .p2p-node-name{
+      font-size:11.5px;
+    }
+    .p2p-track{
+      min-width:70px;
+    }
+    .p2p-badge{
+      font-size:9.5px;
+      padding:2px 6px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .p2p-packet{
+      animation:none !important;
+      left:50% !important;
+      opacity:0.7 !important;
+    }
+    .p2p-badge .p2p-pulse{
+      animation:none !important;
+    }
+  }
+
   .other-work-label{
     font-family:var(--mono);
     font-size:11px;

@@ -88,34 +88,67 @@
 
   <div class="featured-project reveal">
     <div class="featured-eyebrow">Featured Project</div>
-    <h3 class="featured-title">Spendly</h3>
-    <p class="featured-tagline">Personal Finance Management Platform</p>
-    <p class="featured-desc">A full-stack personal finance platform for managing multiple wallets, tracking transactions, and planning budgets — built with a real cloud-backed architecture rather than a local mock dataset.</p>
+    <h3 class="featured-title">DevDrop</h3>
+    <p class="featured-tagline">Peer-to-Peer File Transfer</p>
+    <p class="featured-desc">Browser-native P2P file sharing built with WebRTC DataChannels, chunked streaming, backpressure, and SHA-256 integrity verification.</p>
 
-    <div class="featured-tags">
-      <button type="button" class="tag" data-tech="React">React</button><button type="button" class="tag" data-tech="TypeScript">TypeScript</button><button type="button" class="tag" data-tech="Node.js">Node.js</button>
-      <button type="button" class="tag" data-tech="MongoDB">MongoDB Atlas</button><button type="button" class="tag" data-tech="Google OAuth">Google OAuth</button>
+    <div class="p2p-diagram" aria-label="Peer-to-peer data flow visualization">
+      <div class="p2p-node">
+        <span class="p2p-node-tag">PEER_A</span>
+        <span class="p2p-node-name">Device A</span>
+        <span class="p2p-node-sub">Sender</span>
+      </div>
+      <div class="p2p-track">
+        <div class="p2p-line-wrap">
+          <div class="p2p-packet"></div>
+          <div class="p2p-packet p2p-packet-2"></div>
+        </div>
+        <div class="p2p-badge"><span class="p2p-pulse"></span> P2P DIRECT</div>
+      </div>
+      <div class="p2p-node" style="text-align:right;">
+        <span class="p2p-node-tag">PEER_B</span>
+        <span class="p2p-node-name">Device B</span>
+        <span class="p2p-node-sub">Receiver</span>
+      </div>
     </div>
 
-    <ul class="featured-highlights">
-      <li>Migrated from a local mock <code>db.json</code> architecture to MongoDB Atlas</li>
-      <li>User-owned wallet architecture with onboarding for new users</li>
-      <li>Google OAuth authentication and account handling</li>
-      <li>Full CRUD transaction handling tied to real wallets</li>
-      <li>Interactive financial analytics and budget planning</li>
-      <li>Inline category creation and legacy transaction migration</li>
-      <li>Responsive UI with cloud-backed, user-specific data persistence</li>
-    </ul>
+    <div class="featured-tags">
+      <button type="button" class="tag" data-tech="React">React</button><button type="button" class="tag" data-tech="TypeScript">TypeScript</button><button type="button" class="tag" data-tech="WebRTC">WebRTC</button><button type="button" class="tag" data-tech="Node.js">Node.js</button><button type="button" class="tag" data-tech="WebSocket">WebSocket</button><button type="button" class="tag" data-tech="Redis">Redis</button>
+    </div>
+
+    <div class="tech-spec-grid">
+      <div class="tech-spec-item">
+        <div class="tech-spec-title">P2P Data Channels</div>
+        <div class="tech-spec-desc">Direct browser-to-browser transfer</div>
+      </div>
+      <div class="tech-spec-item">
+        <div class="tech-spec-title">Adaptive Backpressure</div>
+        <div class="tech-spec-desc">Controlled chunk streaming</div>
+      </div>
+      <div class="tech-spec-item">
+        <div class="tech-spec-title">SHA-256 Integrity</div>
+        <div class="tech-spec-desc">Transfer integrity verification</div>
+      </div>
+    </div>
 
     <div class="featured-actions">
-      <a class="btn primary" href="https://spendly-107229934573.asia-southeast1.run.app/" target="_blank" rel="noopener">Live Demo</a>
-      <a class="btn" href="https://github.com/Gautkk30/Spendly" target="_blank" rel="noopener">GitHub</a>
-      <a class="btn proj-more" href="#" data-project="spendly">Case Study</a>
+      <a class="btn primary" href="https://github.com/Gautkk30/DevDrop" target="_blank" rel="noopener">View Project <span class="arrow">↗</span></a>
+      <a class="btn" href="https://github.com/Gautkk30/DevDrop" target="_blank" rel="noopener">Source <span class="arrow">↗</span></a>
+      <a class="btn proj-more" href="#" data-project="devdrop">Case Study</a>
     </div>
   </div>
 
   <div class="other-work-label reveal">Other Projects</div>
   <div class="proj-grid other-proj-grid">
+    <div class="proj-card reveal">
+      <div class="proj-top">
+        <span class="proj-name">Spendly</span>
+        <span class="proj-status">shipped</span>
+      </div>
+      <p class="proj-desc">A full-stack personal finance platform for managing multiple wallets, tracking transactions, and planning budgets — built with MongoDB Atlas cloud persistence.</p>
+      <div class="proj-tags"><button type="button" class="tag" data-tech="React">React</button><button type="button" class="tag" data-tech="TypeScript">TypeScript</button><button type="button" class="tag" data-tech="Node.js">Node.js</button><button type="button" class="tag" data-tech="MongoDB">MongoDB Atlas</button><button type="button" class="tag" data-tech="Google OAuth">Google OAuth</button></div>
+      <div class="proj-links"><a href="https://github.com/Gautkk30/Spendly" target="_blank" rel="noopener">github</a><a href="https://spendly-107229934573.asia-southeast1.run.app/" target="_blank" rel="noopener">live demo</a><a href="#" class="proj-more" data-project="spendly">case study</a></div>
+    </div>
     <div class="proj-card reveal">
       <div class="proj-top">
         <span class="proj-name">Musi</span>
@@ -197,13 +230,13 @@
       <div class="skill-group-title">Frontend</div>
       <div class="chips">
         <button type="button" class="chip" data-tech="HTML">HTML</button><button type="button" class="chip" data-tech="CSS">CSS</button><button type="button" class="chip" data-tech="JavaScript">JavaScript</button>
-        <button type="button" class="chip" data-tech="React">React</button><button type="button" class="chip" data-tech="Bootstrap">Bootstrap</button>
+        <button type="button" class="chip" data-tech="React">React</button><button type="button" class="chip" data-tech="TypeScript">TypeScript</button><button type="button" class="chip" data-tech="WebRTC">WebRTC</button><button type="button" class="chip" data-tech="Bootstrap">Bootstrap</button>
       </div>
     </div>
     <div class="skill-group reveal">
       <div class="skill-group-title">Backend / Data</div>
       <div class="chips">
-        <button type="button" class="chip" data-tech="Node.js">Node.js</button><button type="button" class="chip" data-tech="MongoDB">MongoDB</button><button type="button" class="chip" data-tech="SQL">SQL</button>
+        <button type="button" class="chip" data-tech="Node.js">Node.js</button><button type="button" class="chip" data-tech="WebSocket">WebSocket</button><button type="button" class="chip" data-tech="Redis">Redis</button><button type="button" class="chip" data-tech="MongoDB">MongoDB</button><button type="button" class="chip" data-tech="SQL">SQL</button>
       </div>
     </div>
     <div class="skill-group reveal">

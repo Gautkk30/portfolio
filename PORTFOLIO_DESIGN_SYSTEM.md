@@ -167,12 +167,17 @@ The portfolio features a deliberate **Developer / Code Editor / Terminal** visua
 * **GitHub Handle**: `Gautkk30`
 
 ### Major Projects Reference
-1. **SPENDLY**:
-   * **Role**: Featured Project
+1. **DEVDROP**:
+   * **Role**: Primary Featured Project
+   * **Description**: Browser-native P2P file sharing built with WebRTC DataChannels, chunked streaming, backpressure, and SHA-256 integrity verification.
+   * **Stack**: React, TypeScript, WebRTC, Node.js, WebSocket, Redis.
+   * **Engineering Highlights**: Direct WebRTC DataChannel browser-to-browser transfer, chunked streaming with adaptive backpressure, Web Crypto SHA-256 integrity verification on both peers, WebSocket signaling, Redis-backed ephemeral room state with TTL expiration, QR-based room pairing, zero server-side file storage.
+2. **SPENDLY**:
+   * **Role**: Project
    * **Description**: Full-stack personal finance platform with cloud persistence.
    * **Stack**: React, TypeScript, Node.js, Express, MongoDB Atlas, Google OAuth 2.0, Cloud Run.
    * **Engineering Highlights**: Real user-owned wallet architecture, MongoDB Atlas cloud migration, budget planning, transaction CRUD, inline categories, legacy data migration.
-2. **MUSI**:
+3. **MUSI**:
    * **Description**: Modern music player web application.
    * **Stack**: HTML, CSS, JavaScript, Java, Firebase, iTunes Search API.
    * **Features**: Local audio playback, 30s preview iTunes search, customizable equalizer, multiple themes.

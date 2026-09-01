@@ -139,7 +139,8 @@
       email: { text: 'opening mailto:kkgautham28@gmail.com ...', url: 'mailto:kkgautham28@gmail.com' },
       github: { text: 'opening github.com/Gautkk30 ...', url: 'https://github.com/Gautkk30' },
       linkedin: { text: 'opening linkedin.com/in/gautham-kk ...', url: 'https://www.linkedin.com/in/gautham-kk' },
-      instagram: { text: 'opening instagram.com/kk.gautham ...', url: 'https://www.instagram.com/kk.gautham' }
+      instagram: { text: 'opening instagram.com/kk.gautham ...', url: 'https://www.instagram.com/kk.gautham' },
+      devdrop: { text: 'opening github.com/Gautkk30/DevDrop ...', url: 'https://github.com/Gautkk30/DevDrop' }
     };
     input.addEventListener('keydown', function(e){
       if(e.key !== 'Enter') return;
@@ -199,6 +200,38 @@
   // ---- case study modal ----
   (function(){
     var projectData = {
+      devdrop: {
+        filename: 'devdrop.md',
+        title: 'DevDrop',
+        tagline: 'Browser-native P2P file sharing built with WebRTC DataChannels, chunked streaming, adaptive backpressure, and SHA-256 integrity verification.',
+        problem: 'Sharing large files between devices usually requires uploading them to a third-party server.',
+        approach: 'DevDrop establishes a WebRTC peer connection and transfers files directly between browsers while the backend handles signaling and ephemeral room state.',
+        gallery: [],
+        features: [
+          'Direct WebRTC DataChannel browser-to-browser binary transfer',
+          'Chunked file streaming with adaptive backpressure handling',
+          'Web Crypto SHA-256 integrity verification on both peers',
+          'WebSocket-based SDP offer/answer signaling and ICE candidate discovery',
+          'Redis-backed ephemeral room state with automated TTL expiration',
+          'Instant device pairing via 6-character room codes and QR scanning',
+          'End-to-end DTLS-SRTP encryption with zero server-side file storage'
+        ],
+        stack: [
+          ['Frontend', 'React, TypeScript, Tailwind CSS, Vite'],
+          ['P2P Protocol', 'WebRTC DataChannels, DTLS-SRTP, Web Crypto API'],
+          ['Signaling Server', 'Node.js, Express, WebSocket (ws)'],
+          ['State / Store', 'Redis (ephemeral room & TTL management)'],
+          ['Repository', 'github.com/Gautkk30/DevDrop']
+        ],
+        roadmap: [
+          'Multi-peer mesh transfers',
+          'Folder / directory tree streaming',
+          'Automatic TURN relay fallback diagnostics',
+          'Mobile PWA share target API integration'
+        ],
+        github: 'https://github.com/Gautkk30/DevDrop',
+        demo: 'https://github.com/Gautkk30/DevDrop'
+      },
       spendly: {
         filename: 'spendly.md',
         title: 'Spendly',
@@ -275,9 +308,18 @@
 
       modalFilename.textContent = d.filename;
 
-      var gallery = d.gallery.map(function(g){
-        return '<img src="' + g.src + '" alt="' + g.alt + '" loading="lazy">';
-      }).join('');
+      var galleryHtml = (d.gallery && d.gallery.length) ?
+        '<div class="cs-section-label">Screenshots</div>' +
+        '<div class="cs-gallery">' + d.gallery.map(function(g){
+          return '<img src="' + g.src + '" alt="' + g.alt + '" loading="lazy">';
+        }).join('') + '</div>' : '';
+
+      var problemApproachHtml = (d.problem && d.approach) ?
+        '<div class="cs-section-label">The Problem &amp; Approach</div>' +
+        '<div class="cs-overview-box" style="background:var(--bg-panel-2); border:1px solid var(--border); border-radius:6px; padding:14px 16px; margin-bottom:18px; font-size:13.5px; line-height:1.6; color:var(--text-dim);">' +
+          '<div style="margin-bottom:8px;"><strong style="color:var(--text); font-family:var(--mono); font-size:11.5px; text-transform:uppercase; letter-spacing:.06em;">The Problem:</strong> ' + d.problem + '</div>' +
+          '<div><strong style="color:var(--text); font-family:var(--mono); font-size:11.5px; text-transform:uppercase; letter-spacing:.06em;">The Approach:</strong> ' + d.approach + '</div>' +
+        '</div>' : '';
 
       var features = d.features.map(function(f){ return '<li>' + f + '</li>'; }).join('');
 
@@ -290,9 +332,9 @@
       modalBody.innerHTML =
         '<h3 class="cs-title">' + d.title + '</h3>' +
         '<p class="cs-tagline">' + d.tagline + '</p>' +
-        '<div class="cs-section-label">Screenshots</div>' +
-        '<div class="cs-gallery">' + gallery + '</div>' +
-        '<div class="cs-section-label">Features</div>' +
+        problemApproachHtml +
+        galleryHtml +
+        '<div class="cs-section-label">Engineering Highlights</div>' +
         '<ul class="cs-features">' + features + '</ul>' +
         '<div class="cs-section-label">Tech stack</div>' +
         '<table class="cs-stack-table"><tbody>' + stackRows + '</tbody></table>' +
@@ -300,7 +342,7 @@
         '<ul class="cs-roadmap">' + roadmap + '</ul>' +
         '<div class="cs-links">' +
           '<a class="btn" href="' + d.github + '" target="_blank" rel="noopener">github</a>' +
-          '<a class="btn primary" href="' + d.demo + '" target="_blank" rel="noopener">live demo</a>' +
+          '<a class="btn primary" href="' + d.demo + '" target="_blank" rel="noopener">' + (d.demo === d.github ? 'view repository ↗' : 'live demo') + '</a>' +
         '</div>';
     }
 
@@ -415,7 +457,8 @@
       { label: 'Go to Skills', hint: 'section', action: function(){ scrollToSection('skills'); } },
       { label: 'Go to About', hint: 'section', action: function(){ scrollToSection('about'); } },
       { label: 'Go to Contact', hint: 'section', action: function(){ scrollToSection('contact'); } },
-      { label: 'View Spendly case study', hint: 'featured project', action: function(){ if(window.__openCaseStudy) window.__openCaseStudy('spendly'); } },
+      { label: 'View DevDrop case study', hint: 'featured project', action: function(){ if(window.__openCaseStudy) window.__openCaseStudy('devdrop'); } },
+      { label: 'View Spendly case study', hint: 'project', action: function(){ if(window.__openCaseStudy) window.__openCaseStudy('spendly'); } },
       { label: 'View Musi case study', hint: 'project', action: function(){ if(window.__openCaseStudy) window.__openCaseStudy('musi'); } },
       { label: 'Send a message', hint: 'contact form', action: function(){ scrollToSection('contact'); var el = document.getElementById('cfName'); if(el) setTimeout(function(){ el.focus(); }, 500); } },
       { label: 'Download Resume', hint: 'PDF download', action: function(){ var a = document.createElement('a'); a.href = 'assets/Gautham_KK_resume.pdf'; a.download = 'Gautham_KK_resume.pdf'; document.body.appendChild(a); a.click(); document.body.removeChild(a); } },
@@ -796,10 +839,10 @@
       'HTML': { usedIn: ['Spendly', 'Musi', 'Portfolio'], purpose: 'Page structure and markup.' },
       'CSS': { usedIn: ['Spendly', 'Musi', 'Portfolio'], purpose: 'Styling, layout, and responsive design.' },
       'JavaScript': { usedIn: ['Musi', 'Portfolio'], purpose: 'Interactivity and application logic.' },
-      'React': { usedIn: ['Spendly'], purpose: 'Frontend application and interactive user interface.' },
-      'TypeScript': { usedIn: ['Spendly'], purpose: 'Type-safe frontend development.' },
+      'React': { usedIn: ['DevDrop', 'Spendly'], purpose: 'Frontend application and interactive user interface.' },
+      'TypeScript': { usedIn: ['DevDrop', 'Spendly'], purpose: 'Type-safe frontend development.' },
       'Bootstrap': { usedIn: [], purpose: 'Responsive UI components and layout utilities.' },
-      'Node.js': { usedIn: ['Spendly'], purpose: 'Backend REST API and server logic.' },
+      'Node.js': { usedIn: ['DevDrop', 'Spendly'], purpose: 'Backend REST API, signaling, and server logic.' },
       'MongoDB': { usedIn: ['Spendly'], purpose: 'Cloud database persistence — wallets, transactions, budgets, and user data.' },
       'SQL': { usedIn: [], purpose: 'Relational database querying.' },
       'C': { usedIn: [], purpose: 'Core programming and systems fundamentals.' },
@@ -814,7 +857,10 @@
       'Google OAuth': { usedIn: ['Spendly'], purpose: 'Secure user authentication.' },
       'iTunes API': { usedIn: ['Musi'], purpose: 'Music search with 30-second previews.' },
       'Java': { usedIn: ['Musi'], purpose: 'Backend logic.' },
-      'Firebase': { usedIn: ['Musi'], purpose: 'Backend services.' }
+      'Firebase': { usedIn: ['Musi'], purpose: 'Backend services.' },
+      'WebRTC': { usedIn: ['DevDrop'], purpose: 'Direct browser-to-browser peer connections and chunked binary streaming.' },
+      'WebSocket': { usedIn: ['DevDrop'], purpose: 'Real-time signaling for SDP offer/answer exchange and ICE candidate discovery.' },
+      'Redis': { usedIn: ['DevDrop'], purpose: 'In-memory ephemeral room and session state management with TTL expiration.' }
     };
 
     var openTrigger = null;
