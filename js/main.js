@@ -140,7 +140,7 @@
       github: { text: 'opening github.com/Gautkk30 ...', url: 'https://github.com/Gautkk30' },
       linkedin: { text: 'opening linkedin.com/in/gautham-kk ...', url: 'https://www.linkedin.com/in/gautham-kk' },
       instagram: { text: 'opening instagram.com/kk.gautham ...', url: 'https://www.instagram.com/kk.gautham' },
-      devdrop: { text: 'opening github.com/Gautkk30/DevDrop ...', url: 'https://github.com/Gautkk30/DevDrop' }
+      devdrop: { text: 'opening https://devdrop-a4c.pages.dev/ ...', url: 'https://devdrop-a4c.pages.dev/' }
     };
     input.addEventListener('keydown', function(e){
       if(e.key !== 'Enter') return;
@@ -230,7 +230,7 @@
           'Mobile PWA share target API integration'
         ],
         github: 'https://github.com/Gautkk30/DevDrop',
-        demo: 'https://github.com/Gautkk30/DevDrop'
+        demo: 'https://devdrop-a4c.pages.dev/'
       },
       spendly: {
         filename: 'spendly.md',
